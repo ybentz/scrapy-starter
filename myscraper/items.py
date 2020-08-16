@@ -5,8 +5,13 @@
 
 import scrapy
 
+class Page(scrapy.Item):
+    products = scrapy.Field()
+    title = scrapy.Field()
+    update_date = scrapy.Field()
 
-class MyscraperItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class Product(scrapy.Item):
+    name = scrapy.Field()
+    label = scrapy.Field()
+    buy_urls = scrapy.Field()
+    images = scrapy.Field()
